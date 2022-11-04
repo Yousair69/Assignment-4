@@ -1,0 +1,175 @@
+1. Consider the code:
+List nameList = [Bilal, Bilal, Bilal, Owais, Owais, Owais];
+What can to be done in order to not repeat Bilal and Owais multiple times?
+
+void main() {
+  List namelist = ['Bilal', 'Bilal', 'Bilal', 'Owais', 'Owais', 'Owais'];
+List distinctList = namelist.toSet().toList();
+
+  for (int i = 0; i < distinctList.length; i++) {
+    namelist.remove(distinctList[i]);
+  }
+
+ 
+  print(namelist.toSet().toList());
+
+}
+
+
+2. Let’s say you are given a list saved in a variable:
+Consider a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100].
+Write a code that takes this list and makes a new list that has only the even elements of this list in it.
+
+void main() {
+  List<int> a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100];
+  List<int> even = a.where((number) => number.isEven).toList();
+  print(even);
+}
+
+
+3. Write a program to print multiplication table of 7 length 15 using loop.
+
+void main() {
+  int x = 7; 
+
+  for (int y = 1; y <= 15; y++) {
+    int timesTableTotal = x * y;
+
+    print('$x * $y = $timesTableTotal');
+  }
+}
+
+4. Write a program to print items of the following array using for loop:
+fruits = [“apple”, “banana”, “mango”, “orange”, “strawberry”].
+
+void main() {
+   var fruits = ['apple','banana','kiwi','mango'];
+   for( var fruit in fruits ){
+      print(fruit);
+   }
+}
+
+
+5. Write a program to print multiples of 5 ranging 1 to 100.
+void main(){
+  for(int i=1; i<=100; i++){
+    if(i%5 == 0){
+      print(i);
+    }
+  } 
+}
+
+8. Write a program to create a calculator for +, -, *, / & % using if
+statements. Take the following input:
+a. First number Second number
+b. Operation (+, -, *, /, %)
+Compute & show the calculated result to user.
+
+void main() {
+ int num1=10;
+ int num2=3;
+ 
+ 
+ int sum=num1+num2;       
+ int diff=num1-num2;      
+ int unaryMinus = -num1;   
+ int mul=num1*num2;       
+ double div=num1/num2;    
+ int div2 =num1~/num2;     
+ int mod=num1%num2;       
+ 
+
+ print("The addition is $sum.");
+ print("The subtraction is $diff.");
+ print("The unary minus is $unaryMinus.");
+ print("The multiplication is $mul.");
+ print("The division is $div.");
+ print("The integer division is $div2.");
+ print("The modulus is $mod."); 
+}
+
+9. Write a program that takes a character (I. e. string of length 1) and
+returns true if it is a vowel, false otherwise.
+
+void main() {
+String ch = "K";
+if(ch=='A' || ch=='a'|| ch=='E' || ch =='e' || ch=='I'
+|| ch=='i' || ch=='O'|| ch=='o'|| ch=='U' || ch=='u') {
+  print ("True");
+}  else {
+  print ("False");
+}
+
+10. Write a program to reverse a string. For example, if my string is
+"natsikaP nawaJ" then my result will be "Jawan Pakistan".
+
+void main() {
+  var coflutter = 'natsikaP nawaJ';
+
+  print(reverseStringUsingSplit('natsikaP nawaJ'));
+  print(reverseStringUsingRunes('natsikaP nawaJ'));
+  print(reverseStringUsingCodeUnits('natsikaP nawaJ'));
+}
+
+String reverseStringUsingSplit(String input) {
+  var chars = input.split('');
+  return chars.reversed.join();
+}
+
+String reverseStringUsingRunes(String input) {
+  var chars = input.runes.toList();
+
+  return String.fromCharCodes(chars.reversed);
+}
+
+String reverseStringUsingCodeUnits(String input) {
+  return String.fromCharCodes(input.codeUnits.reversed);
+}
+
+13. List<int> unsortedList = [65, 34, 43, 44, 28, 70, 47, 52, 8, 11];
+Find the largest and smallest number in an unsorted integer array?
+
+void main() {
+  List<int> unsortedList = [65, 34, 43, 44, 28, 70, 47, 52, 8, 11];
+  var largestunsortedvalue = unsortedList[0];
+  var smallestunsortedvalue = unsortedList[0];
+
+  for (var i = 0; i < unsortedList.length; i++) {
+    if (unsortedList[i] > largestunsortedvalue) {
+      largestunsortedvalue = unsortedList[i];
+    }
+    if (unsortedList[i] < smallestunsortedvalue) {
+      smallestunsortedvalue = unsortedList[i];
+    }
+  }
+
+    print("Smallest value in the list : $smallestunsortedvalue");
+  print("Largest value in the list : $largestunsortedvalue");
+}
+
+
+
+void main() {
+  String name = 'Yousair';
+  int rollnumber = 09;
+  int standard = 7;
+  int totalMarks = 300;
+  int maths = 78;
+  int eng = 45;
+  int urdu = 62;
+  int obtainedMarks;
+  double percentage;
+
+  obtainedMarks = maths + eng + urdu;
+
+  percentage = (obtainedMarks / totalMarks) * 100;
+
+  print('Name = $name');
+  print('\nrollnumber = $rollnumber');
+  print('\nstandard = $standard');
+  print('\nMaths = $maths');
+  print('\neng = $eng');
+  print('\nurdu = $urdu');
+  print('\nTotal Marks = $totalMarks');
+  print('\nPercentage = $percentage');
+}
